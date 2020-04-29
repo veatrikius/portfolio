@@ -25,6 +25,9 @@
         displacementFilter = new PIXI.filters.DisplacementFilter(depthMap);
         app.stage.filters = [displacementFilter];
         window.onmousemove = function(e) {
+		if (e.clientX > window.innerHeight*0.75) {
+			return;
+		}
 		console.log(e.clientX);
 		let w = window.innerHeight*0.75
 		if (e.clientX < w) {

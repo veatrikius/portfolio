@@ -16,7 +16,7 @@
         document.body.appendChild(app.view);
         let img = new PIXI.Sprite.from("image.jpg");
 		console.log("img", img.width, img.height);
-        img.width = window.innerHeight*img.width/img.height;
+        img.width = window.innerHeight*0.75;
         img.height = window.innerHeight;
         app.stage.addChild(img);
         depthMap = new PIXI.Sprite.from("depth2.jpg");

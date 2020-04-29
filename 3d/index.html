@@ -26,7 +26,11 @@
         app.stage.filters = [displacementFilter];
         window.onmousemove = function(e) {
 		console.log(e.clientX);
-          displacementFilter.scale.x = (window.innerHeight*750/1000 / 2 - e.clientX) /20;
+		let w = window.innerHeight*0.75
+		if (e.clientX < w) {
+			w = e.clientX;
+		}
+          displacementFilter.scale.x = (window.innerHeight*750/1000 / 2 - w) /20;
           displacementFilter.scale.y = (window.innerHeight / 2 - e.clientY) /20;
         };
         </script>

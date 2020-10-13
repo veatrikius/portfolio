@@ -1,3 +1,5 @@
+Access-Control-Allow-Origin: *
+
 {
     "asset" : {
         "generator" : "Khronos glTF Blender I/O v1.0.5",
